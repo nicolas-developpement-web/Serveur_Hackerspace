@@ -12,6 +12,8 @@ services:
     image: php:fpm-alpine
     networks:
       - internal
+    volumes:
+      - /var/lib/docker/volumes/wireguard/_data:/var/www/html/
 networks:
   internal:
     driver: bridge
